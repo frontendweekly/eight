@@ -1,6 +1,5 @@
-const path = require('path');
-const d8yConfig = path.join(__dirname, './packages/eslint-config-d8y/index.js');
+const eslintConfig = require('@frontendweekly/eslint-config-molle');
 
 module.exports = {
-  extends: [d8yConfig],
+  extends: [eslintConfig],
 };

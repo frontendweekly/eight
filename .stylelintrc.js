@@ -1,9 +1,5 @@
-const path = require('path');
-const d8yConfig = path.join(
-  __dirname,
-  './packages/stylelint-config-d8y/index.js'
-);
+const stylelintConfig = require('@frontendweekly/stylelint-config-molle');
 
 module.exports = {
-  extends: [d8yConfig],
+  extends: [stylelintConfig],
 };
