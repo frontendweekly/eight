@@ -1,5 +1,3 @@
-const eslintConfig = require('@frontendweekly/eslint-config-molle');
-
 module.exports = {
-  extends: [eslintConfig],
+  extends: '@frontendweekly/eslint-config-molle',
 };
