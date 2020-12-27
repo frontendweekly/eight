@@ -4,6 +4,7 @@ const toml = require('toml');
 const rssPlugin = require('@11ty/eleventy-plugin-rss');
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 const eleventyNavigationPlugin = require('@11ty/eleventy-navigation');
+const md = require('@frontendweekly/eleventy-plugin-markdown');
 
 module.exports = function (eleventyConfig) {
   // Add plugins
@@ -11,8 +12,11 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(syntaxHighlight);
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
 
-  // I like toml.
+  // I like toml...
   eleventyConfig.addDataExtension('toml', contents => toml.parse(contents));
+
+  // markdown-it config
+  eleventyConfig.setLibrary('md', md);
 
   return {
     dir: {
